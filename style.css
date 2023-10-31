@@ -55,13 +55,25 @@ header .button-cadastrar {
     color: #ffffff;
 }
 
+
+.col-1::before {
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 12px;
+    margin-right: 8px;
+    background-color:yellow;
+}
+
 main {
     margin: 0;
     display: flex;
-    gap: 30px;
+    gap: 50px;
     flex-direction: row;
     padding: 80px;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 main .botao {
@@ -164,9 +176,10 @@ main .regra-de-tres {
     justify-content: space-between;
 }
 
-main .regra-de-tres form .col1{
+
+/* main .regra-de-tres form .col1{
     margin-bottom: 20px !important;
-}
+} */
 
 main .regra-de-tres form input {
     width: 150px;
@@ -180,7 +193,28 @@ main .regra-de-tres form input {
 
 main .regra-de-tres form .form1, .form2{
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+main .regra-de-tres form .form1 div{
+    width: 40px;
+    height: 1px;
+    background: black;
+}
+
+main .regra-de-tres form .form1 {
+    margin-bottom: 20px;
+}
+
+main .regra-de-tres form .form2 div{
+    width: 40px;
+    height: 1px;
+    background: black;
+}
+
+main .regra-de-tres form .form2 {
+    margin-bottom: 20px;
 }
 
 main .regra-de-tres button {
