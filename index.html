@@ -13,6 +13,36 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
+
+    <script>
+      function mask(e, id, mask) {
+        var tecla = window.event ? event.keyCode : e.which;
+        if (tecla > 47 && tecla < 58) {
+          mascara(id, mask);
+          return true;
+        } else {
+          if (tecla == 8 || tecla == 0) {
+            mascara(id, mask);
+            return true;
+          } else return false;
+        }
+      }
+      function mascara(id, mask) {
+        var i = id.value.length;
+        var carac = mask.substring(i, i + 1);
+        var prox_char = mask.substring(i + 1, i + 2);
+        if (i == 0 && carac != "#") {
+          insereCaracter(id, carac);
+          if (prox_char != "#") insereCaracter(id, prox_char);
+        } else if (carac != "#") {
+          insereCaracter(id, carac);
+          if (prox_char != "#") insereCaracter(id, prox_char);
+        }
+        function insereCaracter(id, char) {
+          id.value += char;
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -60,6 +90,7 @@
             id="cpf"
             name="cpf"
             placeholder="Digite seu CPF"
+            onkeypress="return mask(event, this, '###.###.###-##')" maxlength="14" 
           />
           <input
             class="col-md-4"
@@ -67,6 +98,7 @@
             id="telefone"
             name="telefone"
             placeholder="Digite seu telefone"
+            onkeypress="return mask(event, this, '(##) ####-####')" maxlength="15"
           />
           <textarea
             class="col-md-4"
@@ -108,12 +140,7 @@
               placeholder="30"
             />
             <div></div>
-            <input
-              class="col-md-4"
-              type="text"
-              id="campo4"
-              name="campo4"
-            />
+            <input class="col-md-4" type="text" id="campo4" name="campo4" />
           </div>
         </form>
         <button class="botao">Calcular</button>
@@ -140,10 +167,7 @@
           <div class="background-img"></div>
         </div>
       </div>
-
-
     </main>
-
 
     <footer>
       <div>
