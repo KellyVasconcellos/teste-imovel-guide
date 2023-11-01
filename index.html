@@ -91,6 +91,30 @@
         <a href="">Entrar</a>
       </div>
       <button class="button-cadastrar">CADASTRE-SE</button>
+
+
+      <nav id="nav" class="ocultar">
+        <button
+          aria-label="Abrir Menu"
+          id="btn-mobile"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="">Condomínios</a></li>
+          <li><a href="">Fórum</a></li>
+          <li><a href="">Guia</a></li>
+          <li><a href="">Artigos</a></li>
+          <li><a href="">Ferramentas</a></li>
+          <li><a href="">Cotar Imóvel</a></li>
+          <li><a href="">Planos</a></li>
+          <li><a href="">Entrar</a></li>
+        </ul>
+      </nav>
+
     </header>
 
     <main>
@@ -275,6 +299,24 @@
           btnDownload.click();
         });
       });
+
+      const btnMobile = document.getElementById("btn-mobile");
+
+      function toggleMenu(event) {
+        if (event.type === "touchstart") event.preventDefault();
+        const nav = document.getElementById("nav");
+        nav.classList.toggle("active");
+        const active = nav.classList.contains("active");
+        event.currentTarget.setAttribute("aria-expanded", active);
+        if (active) {
+          event.currentTarget.setAttribute("aria-label", "Fechar Menu");
+        } else {
+          event.currentTarget.setAttribute("aria-label", "Abrir Menu");
+        }
+      }
+
+      btnMobile.addEventListener("click", toggleMenu);
+      btnMobile.addEventListener("touchstart", toggleMenu);
     </script>
   </body>
 </html>
