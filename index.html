@@ -61,15 +61,15 @@
       function adcElemento() {
         var divNova = document.createElement("div");
         var conteudoNovo = document.createTextNode("Mensagem Enviada");
-        divNova.classList.add("alert-enviar")
+        divNova.classList.add("alert-enviar");
         divNova.appendChild(conteudoNovo);
 
         var divAtual = document.querySelector(".formulario-mensagem");
         divAtual.appendChild(divNova);
 
         setTimeout(() => {
-          let div = document.querySelector(".alert-enviar")
-          div.remove()
+          let div = document.querySelector(".alert-enviar");
+          div.remove();
         }, 3000);
       }
     </script>
@@ -144,7 +144,9 @@
             placeholder="Digite o assunto"
           ></textarea>
         </form>
-        <button class="botao mensagem" onclick="adcElemento()">Enviar Mensagem</button>
+        <button class="botao mensagem" onclick="adcElemento()">
+          Enviar Mensagem
+        </button>
       </div>
 
       <div class="caixa regra-de-tres">
