@@ -436,7 +436,7 @@ nav #btn-mobile {
 
 /* menu hamburguer*/
 
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
   main .caixa {
     width: 320px;
     height: 310px;
