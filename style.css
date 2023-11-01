@@ -176,11 +176,6 @@ main .regra-de-tres {
     justify-content: space-between;
 }
 
-
-/* main .regra-de-tres form .col1{
-    margin-bottom: 20px !important;
-} */
-
 main .regra-de-tres form input {
     width: 150px;
     height: 20px;
@@ -215,6 +210,11 @@ main .regra-de-tres form .form2 div{
 
 main .regra-de-tres form .form2 {
     margin-bottom: 20px;
+}
+
+main .regra-de-tres form .input-laranja{
+    border: 2px solid #fe6613;
+    border-color: #fe6613;
 }
 
 main .regra-de-tres button {

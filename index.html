@@ -42,6 +42,18 @@
           id.value += char;
         }
       }
+
+      function calc(){
+        let campo1 = document.querySelector(".campo1").value;
+        let campo2 = document.querySelector(".campo2").value;
+        let campo3 = document.querySelector(".campo3").value;
+        let campo4 = document.querySelector(".campo4");
+
+        let result = (parseInt(campo3)* parseInt(campo2)) / parseInt(campo1);
+
+        document.querySelector(".campo4").value = parseInt(result)
+
+      }
     </script>
   </head>
 
@@ -90,7 +102,8 @@
             id="cpf"
             name="cpf"
             placeholder="Digite seu CPF"
-            onkeypress="return mask(event, this, '###.###.###-##')" maxlength="14" 
+            onkeypress="return mask(event, this, '###.###.###-##')"
+            maxlength="14"
           />
           <input
             class="col-md-4"
@@ -98,7 +111,8 @@
             id="telefone"
             name="telefone"
             placeholder="Digite seu telefone"
-            onkeypress="return mask(event, this, '(##) ####-####')" maxlength="15"
+            onkeypress="return mask(event, this, '(##) ####-####')"
+            maxlength="15"
           />
           <textarea
             class="col-md-4"
@@ -116,34 +130,36 @@
         <form>
           <div class="form1">
             <input
-              class="col-md-4 col1 background-tag"
+              class="col-md-4 col1 background-tag campo1" onkeyup="calc()"
               type="text"
               id="campo1"
-              name="campo1"
               placeholder="60"
             />
             <div></div>
             <input
-              class="col-md-4"
+              class="col-md-4 campo2" onkeyup="calc()"
               type="text"
               id="campo2"
-              name="campo2"
               placeholder="100"
             />
           </div>
           <div class="form2">
             <input
-              class="col-md-4"
+              class="col-md-4 campo3" onkeyup="calc()"
               type="text"
               id="campo3"
-              name="campo3"
               placeholder="30"
             />
             <div></div>
-            <input class="col-md-4" type="text" id="campo4" name="campo4" />
+            <input
+              class="col-md-4 input-laranja campo4" onkeyup="calc()"
+              type="text"
+              id="result"
+              placeholder=""
+            />
           </div>
         </form>
-        <button class="botao">Calcular</button>
+        <button class="botao" id="calculate" onclick="calc()">Calcular</button>
       </div>
 
       <div class="caixa-botoes">
