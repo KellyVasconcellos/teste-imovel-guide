@@ -43,19 +43,34 @@
         }
       }
 
-      function calc(){
+      function calc() {
         var campo1 = document.querySelector(".campo1").value;
         var campo2 = document.querySelector(".campo2").value;
         var campo3 = document.querySelector(".campo3").value;
         var campo4 = document.querySelector(".campo4");
 
-        var result = (parseInt(campo3)* parseInt(campo2)) / parseInt(campo1);
+        var result = (parseInt(campo3) * parseInt(campo2)) / parseInt(campo1);
 
-        document.querySelector(".campo4").value = parseInt(result)
+        document.querySelector(".campo4").value = parseInt(result);
       }
 
-      function celular(element){
-        element.innerText = "(99)99999-9999"
+      function celular(element) {
+        element.innerText = "(99)99999-9999";
+      }
+
+      function adcElemento() {
+        var divNova = document.createElement("div");
+        var conteudoNovo = document.createTextNode("Mensagem Enviada");
+        divNova.classList.add("alert-enviar")
+        divNova.appendChild(conteudoNovo);
+
+        var divAtual = document.querySelector(".formulario-mensagem");
+        divAtual.appendChild(divNova);
+
+        setTimeout(() => {
+          let div = document.querySelector(".alert-enviar")
+          div.remove()
+        }, 3000);
       }
     </script>
   </head>
@@ -104,7 +119,7 @@
         <form>
           <h2>Mande uma mensagem:</h2>
           <input
-            class="col-md-4"
+            class="col-my-4"
             type="text"
             id="cpf"
             name="cpf"
@@ -113,7 +128,7 @@
             maxlength="14"
           />
           <input
-            class="col-md-4"
+            class="col-my-4"
             type="text"
             id="telefone"
             name="telefone"
@@ -122,14 +137,14 @@
             maxlength="15"
           />
           <textarea
-            class="col-md-4"
+            class="col-my-4"
             rows="5"
             id="mensagem"
             name="mensagem"
             placeholder="Digite o assunto"
           ></textarea>
         </form>
-        <button class="botao mensagem">Enviar Mensagem</button>
+        <button class="botao mensagem" onclick="adcElemento()">Enviar Mensagem</button>
       </div>
 
       <div class="caixa regra-de-tres">
@@ -137,14 +152,16 @@
         <form>
           <div class="form1">
             <input
-              class="col-md-4 col1 background-tag campo1" onkeyup="calc()"
+              class="col-my-4 col1 background-tag campo1"
+              onkeyup="calc()"
               type="text"
               id="campo1"
               placeholder="60"
             />
             <div></div>
             <input
-              class="col-md-4 campo2" onkeyup="calc()"
+              class="col-my-4 campo2"
+              onkeyup="calc()"
               type="text"
               id="campo2"
               placeholder="100"
@@ -152,14 +169,16 @@
           </div>
           <div class="form2">
             <input
-              class="col-md-4 campo3" onkeyup="calc()"
+              class="col-my-4 campo3"
+              onkeyup="calc()"
               type="text"
               id="campo3"
               placeholder="30"
             />
             <div></div>
             <input
-              class="col-md-4 input-laranja campo4" onkeyup="calc()"
+              class="col-my-4 input-laranja campo4"
+              onkeyup="calc()"
               type="text"
               id="result"
               placeholder=""
