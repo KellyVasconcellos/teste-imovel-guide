@@ -333,3 +333,7 @@ footer a {
   text-decoration: none;
   cursor: pointer;
 }
+
+.downloadImage {
+    display: none;
+}

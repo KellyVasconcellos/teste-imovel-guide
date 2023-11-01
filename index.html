@@ -197,13 +197,13 @@
         <button class="botao modal-my" id="myBtn">ABRIR IMAGEM NO MODAL</button>
       </div>
 
-      <div class="caixa-botoes">
+      <div class="caixa-botoes caixa-botoes-download">
         <div class="caixa1 download-imagem">
           <div class="background-img">
             <button class="botao-background">Imovel Guide</button>
           </div>
         </div>
-        <button class="botao download">Dowload</button>
+        <button class="botao download generate-image">Dowload</button>
       </div>
 
       <div class="caixa-botoes">
@@ -216,9 +216,10 @@
         <!-- Modal content -->
         <div class="modal-content">
           <span class="close">&times;</span>
-          <img src="./img/residencia.png"  width="100%">
+          <img src="./img/residencia.png" width="100%" />
         </div>
       </div>
+      <a class="downloadImage"></a>
     </main>
 
     <footer>
@@ -234,6 +235,8 @@
         <img src="./img/logo.png" width="120" alt="ImovelGuide" width="100%" />
       </div>
     </footer>
+
+    <script src="./js/html2canvas.min.js"></script>
 
     <script>
       // Get the modal
@@ -261,6 +264,17 @@
           modal.style.display = "none";
         }
       };
+
+      let btnGenerate = document.querySelector(".generate-image");
+      let btnDownload = document.querySelector('.downloadImage');
+
+      btnGenerate.addEventListener("click", () => {
+        html2canvas(document.querySelector(".caixa-botoes-download")).then((canvas) => {
+          btnDownload.href = canvas.toDataURL('image/png');
+          btnDownload.download = 'minha-div-em-imagem';
+          btnDownload.click();
+        });
+      });
     </script>
   </body>
 </html>
