@@ -436,18 +436,28 @@ nav #btn-mobile {
 
 /* menu hamburguer*/
 
-@media (min-width: 1024px) {
+@media (max-width: 1400px) {
+  main .caixa {
+    width: 320px;
+    height: 310px;
+    padding: 15px;
+  }
 
-  header #menu{
+  main .caixa1 {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header #menu {
     display: none;
   }
-  
 }
 
 @media (max-width: 1024px) {
-
-  header a, button{
-    font-size:0.875rem;
+  header a,
+  button {
+    font-size: 0.875rem;
   }
 
   main {
@@ -459,8 +469,8 @@ nav #btn-mobile {
 }
 
 @media (max-width: 768px) {
-
-  header a, .button-cadastrar{
+  header a,
+  .button-cadastrar {
     display: none;
   }
   main {
@@ -483,15 +493,14 @@ nav #btn-mobile {
     width: 60%;
   }
 
-
   footer a {
     display: none;
   }
- 
 }
 
 @media (max-width: 425px) {
-  header a, .button-cadastrar{
+  header a,
+  .button-cadastrar {
     display: none;
   }
 
@@ -503,7 +512,7 @@ nav #btn-mobile {
     padding: 0px 20px;
   }
 
-  main{
+  main {
     padding: 10px;
   }
 
