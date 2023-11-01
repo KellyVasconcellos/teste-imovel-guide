@@ -335,5 +335,84 @@ footer a {
 }
 
 .downloadImage {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  main {
+    gap: 10px;
+    padding: 40px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    gap: 10px;
+    padding: 5px;
+    align-items: flex-start;
+  }
+
+  main .caixa {
+    width: 320px;
+    height: 310px;
+    padding: 15px;
+  }
+
+  main .caixa1 {
+    width: 350px;
+  }
+ 
+}
+
+@media (max-width: 425px) {
+  header a,
+  button {
     display: none;
+  }
+
+  header img {
+    width: 40%;
+  }
+
+  header {
+    padding: 0px 20px;
+  }
+
+  main{
+    padding: 10px;
+  }
+
+  main .regra-de-tres form input {
+    width: 60%;
+  }
+
+  main .regra-de-tres button {
+    width: 10%;
+  }
+
+  main .caixa-botoes {
+    width: 100%;
+  }
+
+  main .background-img {
+    width: 100%;
+  }
+
+  footer a {
+    display: none;
+  }
+
+  footer {
+    padding: 0 20px;
+    justify-content: space-around;
+  }
+
+  footer span {
+    font-size: 0.5rem;
+  }
+
+  footer img {
+    width: 80%;
+  }
 }
