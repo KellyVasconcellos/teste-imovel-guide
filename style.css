@@ -406,7 +406,7 @@ footer a {
   }
 
   main .regra-de-tres button {
-    width: 10%;
+    width: 50%;
   }
 
   main .caixa-botoes {
@@ -415,6 +415,10 @@ footer a {
 
   main .background-img {
     width: 100%;
+  }
+
+  main .caixa-botoes .modal-my {
+    width: 87%;
   }
 
   footer a {
