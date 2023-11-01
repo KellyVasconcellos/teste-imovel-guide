@@ -107,6 +107,12 @@ main .corretores .equipe-corretores{
     justify-content: stretch;
 }
 
+main .corretores .equipe-corretores a {
+    cursor: pointer;
+    color: #fe6613;
+    font-size: .75rem;
+}
+
 main .corretores .equipe-corretores .cor-laranja {
     color: #fe6613;
     font-size: .75rem;

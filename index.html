@@ -44,15 +44,18 @@
       }
 
       function calc(){
-        let campo1 = document.querySelector(".campo1").value;
-        let campo2 = document.querySelector(".campo2").value;
-        let campo3 = document.querySelector(".campo3").value;
-        let campo4 = document.querySelector(".campo4");
+        var campo1 = document.querySelector(".campo1").value;
+        var campo2 = document.querySelector(".campo2").value;
+        var campo3 = document.querySelector(".campo3").value;
+        var campo4 = document.querySelector(".campo4");
 
-        let result = (parseInt(campo3)* parseInt(campo2)) / parseInt(campo1);
+        var result = (parseInt(campo3)* parseInt(campo2)) / parseInt(campo1);
 
         document.querySelector(".campo4").value = parseInt(result)
+      }
 
+      function celular(element){
+        element.innerText = "(99)99999-9999"
       }
     </script>
   </head>
@@ -82,13 +85,17 @@
           <div class="espaco">
             <h3>Nome Corretora</h3>
             <p class="cor-azul">3.000 pontos</p>
-            <p class="cor-laranja">ver telefone</p>
+            <a onclick="celular(this)">
+              <p class="cor-laranja">ver telefone</p>
+            </a>
           </div>
           <img src="./img/corretor.png" alt="" />
           <div class="espaco">
             <h3>Nome Corretor</h3>
             <p class="cor-azul">1.260 pontos</p>
-            <p class="cor-laranja">ver telefone</p>
+            <a onclick="celular(this)">
+              <p class="cor-laranja">ver telefone</p>
+            </a>
           </div>
         </div>
       </div>
