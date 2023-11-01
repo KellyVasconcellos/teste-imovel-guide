@@ -389,7 +389,7 @@ nav #btn-mobile {
     overflow-y: hidden;
   }
   #nav.active #menu {
-    height: 80%;
+    height: 70%;
     visibility: visible;
     overflow-y: auto;
   }
